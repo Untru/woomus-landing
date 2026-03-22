@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* WOOMUS brand colors */
+  --woomus-navy: #2B3A67;
+  --woomus-blue: #4A7CCA;
+  --woomus-teal: #00D4AA;
+  --woomus-dark: #1A1A1A;
+  --woomus-dark-gray: #1E2A3A;
+  --woomus-gray: #F5F7FA;
+  --woomus-white: #FFFFFF;
+  --woomus-beige: #D4A574;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-woomus-navy: var(--woomus-navy);
+  --color-woomus-blue: var(--woomus-blue);
+  --color-woomus-teal: var(--woomus-teal);
+  --color-woomus-dark: var(--woomus-dark);
+  --color-woomus-dark-gray: var(--woomus-dark-gray);
+  --color-woomus-gray: var(--woomus-gray);
+  --color-woomus-white: var(--woomus-white);
+  --color-woomus-beige: var(--woomus-beige);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html, body {
+    height: 100%;
+  }
+
+  .font-heading {
+    font-family: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  }
+
+  .font-body {
+    font-family: var(--font-inter), "Inter", sans-serif;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), "Inter", sans-serif;
+  background: var(--woomus-white);
+  color: var(--woomus-dark);
 }
